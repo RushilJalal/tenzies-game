@@ -22,6 +22,20 @@ function App() {
     setDice(allNewDice());
   }
 
+  function holdDice(id) {
+    console.log(id);
+
+    setDice(
+      dice.map((die) => {
+        if (die.key === id) {
+          return { ...die, isHeld: !die.isHeld };
+        } else {
+          return die;
+        }
+      })
+    );
+  }
+
   return (
     <main>
       <h1>Tenzies</h1>
@@ -31,7 +45,16 @@ function App() {
       </h2>
       <div className="die-container">
         {dice.map((obj) => {
-          return <Die key={obj.key} value={obj.value} isHeld={obj.isHeld} />;
+          return (
+            <Die
+              key={obj.key}
+              value={obj.value}
+              isHeld={obj.isHeld}
+              handleClick={() => {
+                holdDice(obj.key);
+              }}
+            />
+          );
         })}
       </div>
       <button className="roll-button" onClick={rollDice}>
