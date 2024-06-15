@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import Die from "./components/Die";
+import { nanoid } from "nanoid";
 
 function App() {
   const [dice, setDice] = useState(allNewDice());
@@ -8,11 +9,11 @@ function App() {
   function allNewDice() {
     const array = [];
     for (let i = 0; i < 10; i++) {
-      const obj = {
+      array.push({
         value: Math.ceil(Math.random() * 6),
-        isHeld: false,
-      };
-      array.push(obj);
+        isHeld: true,
+        key: nanoid(),
+      });
     }
     return array;
   }
@@ -29,8 +30,8 @@ function App() {
         current value between rolls.
       </h2>
       <div className="die-container">
-        {dice.map((obj, index) => {
-          return <Die key={index} value={obj.value} />;
+        {dice.map((obj) => {
+          return <Die key={obj.key} value={obj.value} isHeld={obj.isHeld} />;
         })}
       </div>
       <button className="roll-button" onClick={rollDice}>

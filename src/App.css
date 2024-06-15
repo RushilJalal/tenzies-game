@@ -46,3 +46,7 @@ main {
   font-size: 21px;
   font-weight: 700;
 }
+
+.held {
+  background-color: #59E391;
+}
