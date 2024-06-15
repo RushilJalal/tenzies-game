@@ -1,6 +1,7 @@
-# Tenzies Game
+# Tenzies Game(WIP)
 
-This is a simple implementation of the Tenzies game using React. In Tenzies, the goal is to roll dice until all of them show the same number. You can hold dice to keep their values while rolling the others.<br>
+This is a simple implementation of the Tenzies game using React. In Tenzies, the goal is to roll dice until all of them show the same number. You can hold dice to keep their values while rolling the others.
+
 I made this project while following the Learn React course on [scrimba.com](scrimba.com)
 
 ## Demo
@@ -62,7 +63,6 @@ Contributions are welcome! Please fork the repository and use a feature branch. 
 4. Push to the branch (`git push origin feature/YourFeature`)
 5. Open a pull request
 
-
 ## Acknowledgements
 
-This project is part of Learn React course on [scrimba.com](scrimba.com). 
+This project is part of Learn React course on [scrimba.com](scrimba.com).
